@@ -5,14 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 因群内人恶意分享，已经删除光年节点, server: www.google.com, port: 1, type: ssr, cipher: aes-256-cfb, password: breakwall, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: ""}
-  - {name: 此订阅节点为老司机节点, server: gz.q88q.gq, port: 12168, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: 欢迎加入我们的tg群 http://t.me/subssr, server: zz.q88q.gq, port: 12167, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: tg群 http://t.me/subssr 欢迎订阅, server: hwgz.q88q.gq, port: 12175, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: 高速节点TG@subssr, server: gz.q88q.gq, port: 18890, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps), server: zz.q88q.gq, port: 12161, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB), server: zz.q88q.gq, port: 12163, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
-  - {name: 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps), server: zz.q88q.gq, port: 12162, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:30w67qkpota, obfs-param: e6072623.baidu.com}
+  - {name: 🇨🇳 美国 株洲│TG@ainsipiao, server: gz.q88q.gq, port: 12168, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:r5toahm6aan, obfs-param: 6626d623.baidu.com}
+  - {name: 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps), server: zz.q88q.gq, port: 12161, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:r5toahm6aan, obfs-param: 6626d623.baidu.com}
+  - {name: 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB), server: zz.q88q.gq, port: 12163, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:r5toahm6aan, obfs-param: 6626d623.baidu.com}
+  - {name: 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps), server: zz.q88q.gq, port: 12162, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:r5toahm6aan, obfs-param: 6626d623.baidu.com}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -21,54 +17,38 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - 因群内人恶意分享，已经删除光年节点
-      - 此订阅节点为老司机节点
-      - 欢迎加入我们的tg群 http://t.me/subssr
-      - tg群 http://t.me/subssr 欢迎订阅
-      - 高速节点TG@subssr
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps)
+      - 🇨🇳 美国 株洲│TG@ainsipiao
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps)
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 因群内人恶意分享，已经删除光年节点
-      - 此订阅节点为老司机节点
-      - 欢迎加入我们的tg群 http://t.me/subssr
-      - tg群 http://t.me/subssr 欢迎订阅
-      - 高速节点TG@subssr
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps)
+      - 🇨🇳 美国 株洲│TG@ainsipiao
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps)
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 因群内人恶意分享，已经删除光年节点
-      - 此订阅节点为老司机节点
-      - 欢迎加入我们的tg群 http://t.me/subssr
-      - tg群 http://t.me/subssr 欢迎订阅
-      - 高速节点TG@subssr
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps)
+      - 🇨🇳 美国 株洲│TG@ainsipiao
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps)
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 因群内人恶意分享，已经删除光年节点
-      - 此订阅节点为老司机节点
-      - 欢迎加入我们的tg群 http://t.me/subssr
-      - tg群 http://t.me/subssr 欢迎订阅
-      - 高速节点TG@subssr
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps)
+      - 🇨🇳 美国 株洲│TG@ainsipiao
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -88,14 +68,10 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - 因群内人恶意分享，已经删除光年节点
-      - 此订阅节点为老司机节点
-      - 欢迎加入我们的tg群 http://t.me/subssr
-      - tg群 http://t.me/subssr 欢迎订阅
-      - 高速节点TG@subssr
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKBN1 1Gbps)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(HKT 500MB)
-      - 🇭🇰 香港 株洲│高速节点TG@subssr(M2471 1Gbps)
+      - 🇨🇳 美国 株洲│TG@ainsipiao
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKBN1 1Gbps)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(HKT 500MB)
+      - 🇭🇰 香港 株洲│TG@ainsipiao(M2471 1Gbps)
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
