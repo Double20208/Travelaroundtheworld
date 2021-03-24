@@ -14,6 +14,7 @@ proxies:
   - {name: 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 4007, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇩🇪 德国原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇺🇸 美国│TG@ainsipiao, server: us.114514gay.top, port: 8443, type: vmess, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -31,6 +32,7 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
       - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
       - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
+      - 🇺🇸 美国│TG@ainsipiao
       
   - name: ♻️ 自动选择
     type: url-test
@@ -47,6 +49,7 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
       - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
       - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
+      - 🇺🇸 美国│TG@ainsipiao
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -61,6 +64,7 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
       - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
       - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
+      - 🇺🇸 美国│TG@ainsipiao
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -75,6 +79,7 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
       - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
       - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
+      - 🇺🇸 美国│TG@ainsipiao
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -103,6 +108,7 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
       - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
       - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
+      - 🇺🇸 美国│TG@ainsipiao
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
