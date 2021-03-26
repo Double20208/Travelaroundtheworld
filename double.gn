@@ -14,9 +14,9 @@ proxies:
   - {name: 🇨🇳 台湾原生 京沪BGP, server: bgpip1.qhnode.com, port: 4007, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇩🇪 德国原生 京沪BGP, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇵🇭 菲律宾原生 京沪BGP, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
-  - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
-  - {name: 🇨🇳 台湾HINET, server: tw.tcpbbr.net:443, port: 443, type: vmess, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
+  - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, cipher: aes-128-gcm, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
+  - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
+  - {name: 🇨🇳 台湾HINET, server: tw.tcpbbr.net:443, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
