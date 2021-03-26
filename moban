@@ -1,0 +1,372 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    use:
+      - GUI
+      - YOU
+      - NAI
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡
+      - 📹 YouTube
+      - 🎥 NETFLIX
+      - DIRECT
+  - name: "♻️ 自动选择"
+    use:
+      - GUI
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🔯 故障转移
+    use:
+      - GUI
+      - YOU
+      - NAI
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+  - name: 🔮 负载均衡
+    use:
+      - GUI
+      - YOU
+      - NAI
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🚀 节点选择
+      - DIRECT
+  - name: 📹 YouTube
+    use:
+      - YOU
+    type: select
+    proxies:
+      - 📹 自选
+      - 🔯 故障转移
+  - name: 🎥 NETFLIX
+    use:
+      - NAI
+    type: select
+    proxies:
+      - 🎥 自择
+      - 🔯 故障转移
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+  - name: "📹 自选"
+    use:
+      - YOU
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: "🎥 自择"
+    use:
+      - NAI
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+
+
+rules:
+- DOMAIN-SUFFIX,google.com,🚀 节点选择
+- DOMAIN-KEYWORD,google.com,🚀 节点选择
+- DOMAIN-KEYWORD,github,🚀 节点选择
+- DOMAIN,google.com,🚀 节点选择
+- DOMAIN-KEYWORD,admarvel,🛑 全球拦截
+- DOMAIN-KEYWORD,admaster,🛑 全球拦截
+- DOMAIN-KEYWORD,adsage,🛑 全球拦截
+- DOMAIN-KEYWORD,adsensor,🛑 全球拦截
+- DOMAIN-KEYWORD,adservice,🛑 全球拦截
+- DOMAIN-KEYWORD,adsmogo,🛑 全球拦截
+- DOMAIN-KEYWORD,adsrvmedia,🛑 全球拦截
+- DOMAIN-KEYWORD,adsserving,🛑 全球拦截
+- DOMAIN-KEYWORD,adsystem,🛑 全球拦截
+- DOMAIN-KEYWORD,adwords,🛑 全球拦截
+- DOMAIN-KEYWORD,analysis,🛑 全球拦截
+- DOMAIN-KEYWORD,applovin,🛑 全球拦截
+- DOMAIN-KEYWORD,appsflyer,🛑 全球拦截
+- DOMAIN-KEYWORD,domob,🛑 全球拦截
+- DOMAIN-KEYWORD,duomeng,🛑 全球拦截
+- DOMAIN-KEYWORD,dwtrack,🛑 全球拦截
+- DOMAIN-KEYWORD,guanggao,🛑 全球拦截
+- DOMAIN-KEYWORD,omgmta,🛑 全球拦截
+- DOMAIN-KEYWORD,omniture,🛑 全球拦截
+- DOMAIN-KEYWORD,openx,🛑 全球拦截
+- DOMAIN-KEYWORD,partnerad,🛑 全球拦截
+- DOMAIN-KEYWORD,pingfore,🛑 全球拦截
+- DOMAIN-KEYWORD,socdm,🛑 全球拦截
+- DOMAIN-KEYWORD,supersonicads,🛑 全球拦截
+- DOMAIN-KEYWORD,tracking,🛑 全球拦截
+- DOMAIN-KEYWORD,usage,🛑 全球拦截
+- DOMAIN-KEYWORD,wlmonitor,🛑 全球拦截
+- DOMAIN-KEYWORD,zjtoolbar,🛑 全球拦截
+- DOMAIN-SUFFIX,ehg-youtube.hitbox.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ssl-youtube.2cnt.net,🛑 全球拦截
+- DOMAIN-SUFFIX,youtube.112.2o7.net,🛑 全球拦截
+- DOMAIN-SUFFIX,youtube.2cnt.net,🛑 全球拦截
+- DOMAIN-SUFFIX,ads.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,adservice.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,afd.l.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,badad.googleplex.com,🛑 全球拦截
+- DOMAIN-SUFFIX,csi.gstatic.com,🛑 全球拦截
+- DOMAIN-SUFFIX,doubleclick.com,🛑 全球拦截
+- DOMAIN-SUFFIX,doubleclick.net,🛑 全球拦截
+- DOMAIN-SUFFIX,google-analytics.com,🛑 全球拦截
+- DOMAIN-SUFFIX,googleadservices.com,🛑 全球拦截
+- DOMAIN-SUFFIX,googleadsserving.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,googlecommerce.com,🛑 全球拦截
+- DOMAIN-SUFFIX,googlesyndication.com,🛑 全球拦截
+- DOMAIN-SUFFIX,mobileads.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pagead-tpc.l.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pagead.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pagead.l.google.com,🛑 全球拦截
+- DOMAIN-SUFFIX,umeng.com,🛑 全球拦截
+- DOMAIN-KEYWORD,umeng.com,🛑 全球拦截
+- DOMAIN-SUFFIX,tc.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,rtp.gtp.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pingjs.qq.com,🛑 全球拦截
+- DOMAIN-KEYWORD,dp3.qq.com,🛑 全球拦截
+- DOMAIN-KEYWORD,tc.qq.com,🛑 全球拦截
+- DOMAIN-KEYWORD,rtp.gtp.qq.com,🛑 全球拦截
+- DOMAIN-KEYWORD,pingjs.qq.com,🛑 全球拦截
+- DOMAIN,dp3.qq.com,🛑 全球拦截
+- DOMAIN,tc.qq.com,🛑 全球拦截
+- DOMAIN,rtp.gtp.qq.com,🛑 全球拦截
+- DOMAIN,pingjs.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ad.m.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,afp.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,c.uaa.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,cloudpush.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,cm.passport.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,gamecenter.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ifacelog.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,mbdlog.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,meta.video.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,msg.71.am,🛑 全球拦截
+- DOMAIN-SUFFIX,msg1.video.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,msg2.video.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,paopaod.iqiyipic.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pub.m.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,policy.video.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,yuedu.iqiyi.com,🛑 全球拦截
+- DOMAIN-SUFFIX,iqiyi.kim,🛑 全球拦截
+- DOMAIN-SUFFIX,iqiyi.pub,🛑 全球拦截
+- DOMAIN-SUFFIX,qiqiyii.com,🛑 全球拦截
+- DOMAIN,adsmind.apdcdn.tc.qq.com,🛑 全球拦截
+- DOMAIN,adsmind.gdtimg.com,🛑 全球拦截
+- DOMAIN,adsmind.tc.qq.com,🛑 全球拦截
+- DOMAIN,pgdt.gtimg.cn,🛑 全球拦截
+- DOMAIN,pgdt.gtimg.com,🛑 全球拦截
+- DOMAIN,pgdt.ugdtimg.com,🛑 全球拦截
+- DOMAIN,splashqqlive.gtimg.com,🛑 全球拦截
+- DOMAIN,wa.gtimg.com,🛑 全球拦截
+- DOMAIN,wxsnsdy.wxs.qq.com,🛑 全球拦截
+- DOMAIN,wxsnsdythumb.wxs.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,act.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ad.qun.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,adsfile.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,bugly.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,buluo.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,e.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,gdt.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,monitor.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pingma.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pingtcss.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,report.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,tajs.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,tcss.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,uu.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,btrace.video.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,c.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,dp3.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,livep.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,lives.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,livew.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,mcgi.v.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,mdevstat.qqlive.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,omgmta1.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,p.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,rcgi.video.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,t.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,u.l.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,analy.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,btrace.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,btrace.video.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,pingjs.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,rcgi.video.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,report.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,statistic.qzone.qq.com,🛑 全球拦截
+- DOMAIN-SUFFIX,a.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,a.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ad.duapps.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ad.player.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,adm.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,adm.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,adscdn.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,adscdn.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,adx.xiaodutv.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ae.bdstatic.com,🛑 全球拦截
+- DOMAIN-SUFFIX,afd.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,afd.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,als.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,als.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,anquan.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,anquan.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,antivirus.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,api.mobula.sdk.duapps.com,🛑 全球拦截
+- DOMAIN-SUFFIX,appc.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,appc.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,as.baidu.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,as.baidu.com,🛑 全球拦截
+- DOMAIN-SUFFIX,ad.xelements.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,t.me,📲 电报信息
+- DOMAIN-SUFFIX,tdesktop.com,📲 电报信息
+- DOMAIN-SUFFIX,telegra.ph,📲 电报信息
+- DOMAIN-SUFFIX,telegram.me,📲 电报信息
+- DOMAIN-SUFFIX,telegram.org,📲 电报信息
+- DOMAIN-SUFFIX,telesco.pe,📲 电报信息
+- IP-CIDR,91.108.0.0/16,📲 电报信息,no-resolve
+- IP-CIDR,109.239.140.0/24,📲 电报信息,no-resolve
+- IP-CIDR,149.154.160.0/20,📲 电报信息,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,📲 电报信息,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,📲 电报信息,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,📲 电报信息,no-resolve
+- DOMAIN-KEYWORD,netflix,🎥 NETFLIX
+- DOMAIN-SUFFIX,fast.com,🎥 NETFLIX
+- DOMAIN-SUFFIX,nflxext.com,🎥 NETFLIX
+- DOMAIN-SUFFIX,nflximg.com,🎥 NETFLIX
+- DOMAIN-SUFFIX,nflximg.net,🎥 NETFLIX
+- DOMAIN-SUFFIX,nflxso.net,🎥 NETFLIX
+- DOMAIN-SUFFIX,nflxvideo.net,🎥 NETFLIX
+- IP-CIDR,23.246.0.0/18,🎥 NETFLIX,no-resolve
+- IP-CIDR,37.77.184.0/21,🎥 NETFLIX,no-resolve
+- IP-CIDR,45.57.0.0/17,🎥 NETFLIX,no-resolve
+- IP-CIDR,64.120.128.0/17,🎥 NETFLIX,no-resolve
+- IP-CIDR,66.197.128.0/17,🎥 NETFLIX,no-resolve
+- IP-CIDR,108.175.32.0/20,🎥 NETFLIX,no-resolve
+- IP-CIDR,192.173.64.0/18,🎥 NETFLIX,no-resolve
+- IP-CIDR,198.38.96.0/19,🎥 NETFLIX,no-resolve
+- IP-CIDR,198.45.48.0/20,🎥 NETFLIX,no-resolve
+- IP-CIDR,8.41.4.0/24,🎥 NETFLIX,no-resolve
+- IP-CIDR,69.53.224.0/19,🎥 NETFLIX,no-resolve
+- IP-CIDR,185.2.220.0/22,🎥 NETFLIX,no-resolve
+- IP-CIDR,185.9.188.0/22,🎥 NETFLIX,no-resolve
+- IP-CIDR,203.75.0.0/16,🎥 NETFLIX,no-resolve
+- IP-CIDR,207.45.72.0/22,🎥 NETFLIX,no-resolve
+- IP-CIDR,208.75.76.0/22,🎥 NETFLIX,no-resolve
+- DOMAIN-KEYWORD,youtube,📹 YouTube
+- DOMAIN-SUFFIX,youtu.be,📹 YouTube
+- DOMAIN-SUFFIX,googlevideo.com,📹 YouTube
+- DOMAIN-SUFFIX,ytimg.com,📹 YouTube
+- DOMAIN-SUFFIX,ggpht.com,📹 YouTube
+- DOMAIN-SUFFIX,gvt2.com,📹 YouTube
+- DOMAIN-SUFFIX,app-measurement.com,📹 YouTube
+- DOMAIN-SUFFIX,appspot.com,📹 YouTube
+- DOMAIN-SUFFIX,blogger.com,📹 YouTube
+- DOMAIN-SUFFIX,getoutline.org,📹 YouTube
+- DOMAIN-SUFFIX,gvt0.com,📹 YouTube
+- DOMAIN-SUFFIX,gvt3.com,📹 YouTube
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,📹 YouTube
+- DOMAIN-KEYWORD,googlevideo.com,📹 YouTube
+- DOMAIN,googlevideo.com,📹 YouTube
+- DOMAIN-KEYWORD,.blogspot.,📹 YouTube
+- DOMAIN,yt3.ggpht.com,📹 YouTube
+- DOMAIN,youtubei.googleapis.com,📹 YouTube
+- DOMAIN,upos-hz-mirrorakam.akamaized.net,📺 哔哩哔哩
+- DOMAIN-SUFFIX,acg.tv,📺 哔哩哔哩
+- DOMAIN-SUFFIX,acgvideo.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,b23.tv,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bigfun.cn,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bigfunapp.cn,📺 哔哩哔哩
+- DOMAIN-SUFFIX,biliapi.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,biliapi.net,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bilibili.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bilibili.tv,📺 哔哩哔哩
+- DOMAIN-SUFFIX,biligame.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,biligame.net,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bilivideo.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,hdslb.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,im9.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,smtcdns.net,📺 哔哩哔哩
+- DOMAIN,upos-hz-mirrorakam.akamaized.net,📺 哔哩哔哩
+- DOMAIN-SUFFIX,acgvideo.com,📺 哔哩哔哩
+- DOMAIN-SUFFIX,bilibili.com,📺 哔哩哔哩
+- IP-CIDR,45.43.32.234/32,📺 哔哩哔哩
+- IP-CIDR,119.29.29.29/32,📺 哔哩哔哩
+- IP-CIDR,128.1.62.200/32,📺 哔哩哔哩
+- IP-CIDR,128.1.62.201/32,📺 哔哩哔哩
+- IP-CIDR,150.116.92.250/32,📺 哔哩哔哩
+- IP-CIDR,164.52.76.18/32,📺 哔哩哔哩
+- IP-CIDR,203.107.1.33/32,📺 哔哩哔哩
+- IP-CIDR,203.107.1.34/32,📺 哔哩哔哩
+- IP-CIDR,203.107.1.65/32,📺 哔哩哔哩
+- IP-CIDR,203.107.1.66/32,📺 哔哩哔哩
+- DOMAIN-SUFFIX,ad.com,REJECT
+- IP-CIDR,127.0.0.0/8,🎯 全球直连,DIRECT
+- GEOIP,CN,🎯 全球直连,DIRECT
+- MATCH,🚀 节点选择 ,🐟 漏网之鱼
+
+
+proxy-providers:
+  GUI: 
+    type: http
+    url: "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FDouble20208%2FTravelaroundtheworld%2Fmain%2Fdouble.gn&list=true&udp=true&tfo=true&scv=truefdn=true" 
+    interval: 180
+    path: ./Proxy/GUI.yaml 
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  YOU: 
+    type: http
+    url: "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fgitee.com%2Fsharenodes%2Fnodes%2Fraw%2Fmaster%2FV2ray.md&list=true&udp=true&tfo=true&scv=truefdn=true" 
+    interval: 180
+    path: ./Proxy/YOU.yaml 
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  NAI: 
+    type: http
+    url: "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fgitee.com%2Fsharenodes%2Fnodes%2Fraw%2Fmaster%2Fssrss.md&list=true&udp=true&tfo=true&scv=truefdn=true" 
+    interval: 180
+    path: ./Proxy/NAI.yaml 
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
