@@ -40,7 +40,7 @@ proxies:
   - {name: 🇨🇦 加拿大多伦多, server: ap1-ca.er3.xyz, port: 29983, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
   - {name: 🇦🇺 澳大利亚悉尼 , server: ap1-au.er3.xyz, port: 29982, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
 
-proxy-groups:
+ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
