@@ -14,9 +14,18 @@ proxies:
   - {name: 🇨🇳 台湾原生 京沪BGP, server: bgpip1.qhnode.com, port: 4007, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇩🇪 德国原生 京沪BGP, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇵🇭 菲律宾原生 京沪BGP, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇨🇦 加拿大多伦多, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
+  - {name: 🇸🇬 新加坡, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ}
+  - {name: 🇸🇬 金沙, server: 18.136.195.240, port: 10289, type: ss, cipher: aes-256-gcm, password: plAC8oF2SpMh}
+  - {name: 🇭🇰 香港中区, server: 119.147.144.250, port: 18834, type: ss, cipher: aes-256-gcm, password: daCxNwo600NW}
+  - {name: 🇭🇰 香港NF, server: 119.147.144.250, port: 18834, type: ss, cipher: aes-256-gcm, password: daCxNwo600NW}
+  - {name: 🇨🇳 台北NF, server: hinet1.gemgems.net, port: 18477, type: ss, cipher: aes-256-gcm, password: oS7ztgjRuQO1}
+  - {name: 🇨🇳 新北, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
+  - {name: 🇸🇬 新加坡1, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ }
+  - {name: 🇺🇸 西雅图, server: 3.1.49.29, port: 13252, type: ss, cipher: aes-256-gcm, password: cPQHo2tyFK29}
   - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, cipher: aes-128-gcm, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
   - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
-  - {name: 🇨🇳 台湾HINET, server: tw.tcpbbr.net:443, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
+  
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -34,10 +43,18 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP
       - 🇩🇪 德国原生 京沪BGP
       - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇨🇦 加拿大多伦多
+      - 🇸🇬 新加坡
+      - 🇸🇬 金沙
+      - 🇭🇰 香港中区
+      - 🇭🇰 香港NF
+      - 🇨🇳 台北NF
+      - 🇨🇳 新北
+      - 🇸🇬 新加坡1
+      - 🇺🇸 西雅图
       - 🇺🇸 拉斯维加斯
       - 🇭🇰 香港HKBN家宽
-      - 🇨🇳 台湾HINET
-      
+          
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -53,9 +70,17 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP
       - 🇩🇪 德国原生 京沪BGP
       - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇨🇦 加拿大多伦多
+      - 🇸🇬 新加坡
+      - 🇸🇬 金沙
+      - 🇭🇰 香港中区
+      - 🇭🇰 香港NF
+      - 🇨🇳 台北NF
+      - 🇨🇳 新北
+      - 🇸🇬 新加坡1
+      - 🇺🇸 西雅图
       - 🇺🇸 拉斯维加斯
       - 🇭🇰 香港HKBN家宽
-      - 🇨🇳 台湾HINET
       
   - name: 🔯 故障转移
     type: fallback
@@ -71,9 +96,17 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP
       - 🇩🇪 德国原生 京沪BGP
       - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇨🇦 加拿大多伦多
+      - 🇸🇬 新加坡
+      - 🇸🇬 金沙
+      - 🇭🇰 香港中区
+      - 🇭🇰 香港NF
+      - 🇨🇳 台北NF
+      - 🇨🇳 新北
+      - 🇸🇬 新加坡1
+      - 🇺🇸 西雅图
       - 🇺🇸 拉斯维加斯
       - 🇭🇰 香港HKBN家宽
-      - 🇨🇳 台湾HINET
   
   - name: 🔮 负载均衡
     type: load-balance
@@ -89,9 +122,17 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP
       - 🇩🇪 德国原生 京沪BGP
       - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇨🇦 加拿大多伦多
+      - 🇸🇬 新加坡
+      - 🇸🇬 金沙
+      - 🇭🇰 香港中区
+      - 🇭🇰 香港NF
+      - 🇨🇳 台北NF
+      - 🇨🇳 新北
+      - 🇸🇬 新加坡1
+      - 🇺🇸 西雅图
       - 🇺🇸 拉斯维加斯
       - 🇭🇰 香港HKBN家宽
-      - 🇨🇳 台湾HINET
   
   - name: 🎯 全球直连
     type: select
@@ -123,9 +164,17 @@ proxy-groups:
       - 🇨🇳 台湾原生 京沪BGP
       - 🇩🇪 德国原生 京沪BGP
       - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇨🇦 加拿大多伦多
+      - 🇸🇬 新加坡
+      - 🇸🇬 金沙
+      - 🇭🇰 香港中区
+      - 🇭🇰 香港NF
+      - 🇨🇳 台北NF
+      - 🇨🇳 新北
+      - 🇸🇬 新加坡1
+      - 🇺🇸 西雅图
       - 🇺🇸 拉斯维加斯
       - 🇭🇰 香港HKBN家宽
-      - 🇨🇳 台湾HINET
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
