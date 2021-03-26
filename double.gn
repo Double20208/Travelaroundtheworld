@@ -27,7 +27,7 @@ proxies:
   - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
   - {name: 🇸🇬 新加坡新达城, server: ap1-sg.er3.xyz, port: 29986, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
   - {name: 🇭🇰 香港铜锣湾,  server: a1.er3.xyz, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}  
-  - {name: 🇸🇬 新加坡, server: tx.wy.fastqvpn.com, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡2, server: tx.wy.fastqvpn.com, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
   - {name: 🇯🇵 东京银座, server: a1.ap.fastqvpn.com, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
   - {name: 🇸🇬 新加坡圣淘沙, server: a2.ap.fastqvpn.com, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
   - {name: 🇸🇬 新加坡滨海湾, server: a3.ap.fastqvpn.com, port: 29980, type: http, username: 424266815468732416, password: 1726590a-cfd0-4bb8-948a-013b3718d903, tls: true, skip-cert-verify: true}
@@ -70,7 +70,7 @@ proxies:
       - 🇭🇰 香港HKBN家宽
       - 🇸🇬 新加坡新达城
       - 🇭🇰 香港铜锣湾 
-      - 🇸🇬 新加坡 
+      - 🇸🇬 新加坡2 
       - 🇯🇵 东京银座 
       - 🇸🇬 新加坡圣淘沙
       - 🇸🇬 新加坡滨海湾 
@@ -111,7 +111,7 @@ proxies:
       - 🇭🇰 香港HKBN家宽
       - 🇸🇬 新加坡新达城
       - 🇭🇰 香港铜锣湾 
-      - 🇸🇬 新加坡 
+      - 🇸🇬 新加坡2 
       - 🇯🇵 东京银座 
       - 🇸🇬 新加坡圣淘沙
       - 🇸🇬 新加坡滨海湾 
@@ -151,7 +151,7 @@ proxies:
       - 🇭🇰 香港HKBN家宽
       - 🇸🇬 新加坡新达城
       - 🇭🇰 香港铜锣湾 
-      - 🇸🇬 新加坡 
+      - 🇸🇬 新加坡2 
       - 🇯🇵 东京银座 
       - 🇸🇬 新加坡圣淘沙
       - 🇸🇬 新加坡滨海湾 
@@ -191,7 +191,7 @@ proxies:
       - 🇭🇰 香港HKBN家宽
       - 🇸🇬 新加坡新达城
       - 🇭🇰 香港铜锣湾 
-      - 🇸🇬 新加坡 
+      - 🇸🇬 新加坡2 
       - 🇯🇵 东京银座 
       - 🇸🇬 新加坡圣淘沙
       - 🇸🇬 新加坡滨海湾 
@@ -247,7 +247,7 @@ proxies:
       - 🇭🇰 香港HKBN家宽
       - 🇸🇬 新加坡新达城
       - 🇭🇰 香港铜锣湾 
-      - 🇸🇬 新加坡 
+      - 🇸🇬 新加坡2 
       - 🇯🇵 东京银座 
       - 🇸🇬 新加坡圣淘沙
       - 🇸🇬 新加坡滨海湾 
