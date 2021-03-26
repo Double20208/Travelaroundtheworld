@@ -5,16 +5,18 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇨🇳 香港 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇯🇵 日本 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇸🇬 新加坡 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 30103, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇰🇷 韩国 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇺🇸 美国 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 30301, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇯🇵 日本原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 5015, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 4007, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇩🇪 德国原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇺🇸 美国│TG@ainsipiao, server: us.114514gay.top, port: 8443, type: vmess, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
+  - {name: 🇨🇳 香港 京沪BGP, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇯🇵 日本 京沪BGP, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇸🇬 新加坡 京沪BGP, server: bgpip1.qhnode.com, port: 30103, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇰🇷 韩国 京沪BGP, server: bgpip1.qhnode.com, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇺🇸 美国 京沪BGP, server: bgpip1.qhnode.com, port: 30301, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇯🇵 日本原生 京沪BGP, server: bgpip1.qhnode.com, port: 5015, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇨🇳 台湾原生 京沪BGP, server: bgpip1.qhnode.com, port: 4007, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇩🇪 德国原生 京沪BGP, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇵🇭 菲律宾原生 京沪BGP, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
+  - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
+  - {name: 🇨🇳 台湾HINET, server: tw.tcpbbr.net:443, port: 443, type: vmess, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,16 +25,18 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - 🇨🇳 香港 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本 京沪BGP│TG@ainsipiao
-      - 🇸🇬 新加坡 京沪BGP│TG@ainsipiao
-      - 🇰🇷 韩国 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本原生 京沪BGP│TG@ainsipiao
-      - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
-      - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
-      - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国│TG@ainsipiao
+      - 🇨🇳 香港 京沪BGP
+      - 🇯🇵 日本 京沪BGP
+      - 🇸🇬 新加坡 京沪BGP
+      - 🇰🇷 韩国 京沪BGP
+      - 🇺🇸 美国 京沪BGP
+      - 🇯🇵 日本原生 京沪BGP
+      - 🇨🇳 台湾原生 京沪BGP
+      - 🇩🇪 德国原生 京沪BGP
+      - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇺🇸 拉斯维加斯
+      - 🇭🇰 香港HKBN家宽
+      - 🇨🇳 台湾HINET
       
   - name: ♻️ 自动选择
     type: url-test
@@ -40,57 +44,68 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇳 香港 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本 京沪BGP│TG@ainsipiao
-      - 🇸🇬 新加坡 京沪BGP│TG@ainsipiao
-      - 🇰🇷 韩国 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本原生 京沪BGP│TG@ainsipiao
-      - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
-      - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
-      - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国│TG@ainsipiao
+      - 🇨🇳 香港 京沪BGP
+      - 🇯🇵 日本 京沪BGP
+      - 🇸🇬 新加坡 京沪BGP
+      - 🇰🇷 韩国 京沪BGP
+      - 🇺🇸 美国 京沪BGP
+      - 🇯🇵 日本原生 京沪BGP
+      - 🇨🇳 台湾原生 京沪BGP
+      - 🇩🇪 德国原生 京沪BGP
+      - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇺🇸 拉斯维加斯
+      - 🇭🇰 香港HKBN家宽
+      - 🇨🇳 台湾HINET
+      
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 🇨🇳 香港 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本 京沪BGP│TG@ainsipiao
-      - 🇸🇬 新加坡 京沪BGP│TG@ainsipiao
-      - 🇰🇷 韩国 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本原生 京沪BGP│TG@ainsipiao
-      - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
-      - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
-      - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国│TG@ainsipiao
+      - 🇨🇳 香港 京沪BGP
+      - 🇯🇵 日本 京沪BGP
+      - 🇸🇬 新加坡 京沪BGP
+      - 🇰🇷 韩国 京沪BGP
+      - 🇺🇸 美国 京沪BGP
+      - 🇯🇵 日本原生 京沪BGP
+      - 🇨🇳 台湾原生 京沪BGP
+      - 🇩🇪 德国原生 京沪BGP
+      - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇺🇸 拉斯维加斯
+      - 🇭🇰 香港HKBN家宽
+      - 🇨🇳 台湾HINET
+  
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 🇨🇳 香港 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本 京沪BGP│TG@ainsipiao
-      - 🇸🇬 新加坡 京沪BGP│TG@ainsipiao
-      - 🇰🇷 韩国 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本原生 京沪BGP│TG@ainsipiao
-      - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
-      - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
-      - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国│TG@ainsipiao
+      - 🇨🇳 香港 京沪BGP
+      - 🇯🇵 日本 京沪BGP
+      - 🇸🇬 新加坡 京沪BGP
+      - 🇰🇷 韩国 京沪BGP
+      - 🇺🇸 美国 京沪BGP
+      - 🇯🇵 日本原生 京沪BGP
+      - 🇨🇳 台湾原生 京沪BGP
+      - 🇩🇪 德国原生 京沪BGP
+      - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇺🇸 拉斯维加斯
+      - 🇭🇰 香港HKBN家宽
+      - 🇨🇳 台湾HINET
+  
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
+  
   - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
       - DIRECT
+  
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -99,16 +114,18 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - 🇨🇳 香港 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本 京沪BGP│TG@ainsipiao
-      - 🇸🇬 新加坡 京沪BGP│TG@ainsipiao
-      - 🇰🇷 韩国 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国 京沪BGP│TG@ainsipiao
-      - 🇯🇵 日本原生 京沪BGP│TG@ainsipiao
-      - 🇨🇳 台湾原生 京沪BGP│TG@ainsipiao
-      - 🇩🇪 德国原生 京沪BGP│TG@ainsipiao
-      - 🇵🇭 菲律宾原生 京沪BGP│TG@ainsipiao
-      - 🇺🇸 美国│TG@ainsipiao
+      - 🇨🇳 香港 京沪BGP
+      - 🇯🇵 日本 京沪BGP
+      - 🇸🇬 新加坡 京沪BGP
+      - 🇰🇷 韩国 京沪BGP
+      - 🇺🇸 美国 京沪BGP
+      - 🇯🇵 日本原生 京沪BGP
+      - 🇨🇳 台湾原生 京沪BGP
+      - 🇩🇪 德国原生 京沪BGP
+      - 🇵🇭 菲律宾原生 京沪BGP
+      - 🇺🇸 拉斯维加斯
+      - 🇭🇰 香港HKBN家宽
+      - 🇨🇳 台湾HINET
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
