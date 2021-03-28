@@ -42,8 +42,7 @@ proxies:
   - {name: 🇯🇵 日本1, server: global.ap.fastqvpn.com, port: 29985, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
   - {name: 🇬🇧 英国1, server: global.ap.fastqvpn.com, port: 29987, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d799, tls: true}
   - {name: 🇺🇸 美国1, server: global.ap.fastqvpn.com, port: 29988, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-
-  proxy-groups:
+proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
