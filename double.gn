@@ -4,16 +4,6 @@
 #      如有问题请联系 TG@ainsipiao
 #---------------------------------------------------------#
 
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: 127.0.0.1:9090
-rewrite: 
-  hostname = *.googlevideo.com
-ctier=[A-Z] url 307 ctier=A
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject-200
 proxies:
   - {name: 🇨🇳 香港 京沪BGP, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇯🇵 日本 京沪BGP, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
@@ -29,6 +19,9 @@ proxies:
   - {name: 🇨🇳 新北, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
   - {name: 🇸🇬 新加坡1, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ }
   - {name: 🇺🇸 西雅图, server: 3.1.49.29, port: 13252, type: ss, cipher: aes-256-gcm, password: cPQHo2tyFK29}
+  - {name: 🇺🇲 美国 - 硅谷, server: 120.209.53.122, port: 50001, type: trojan, password: 92b191d0, skip-cert-verify: true}
+  - {name: 🇯🇵 日本 - 东京, server: 120.209.53.122, port: 60001, type: trojan, password: 1a4ca082, skip-cert-verify: true}
+  - {name: 🇭🇰 中国 - 香港, server: 120.209.53.122, port: 40001, type: trojan, password: 1a4ca082, skip-cert-verify: true}
   - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, cipher: aes-128-gcm, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
   - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
   - {name: 🇸🇬 新加坡新达城, server: ap1-sg.er3.xyz, port: 29986, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
