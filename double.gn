@@ -5,124 +5,124 @@
 #---------------------------------------------------------#
 
 proxies:
-  - {name: 🇨🇳 香港 京沪BGP, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇯🇵 日本 京沪BGP, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇸🇬 新加坡 京沪BGP, server: bgpip1.qhnode.com, port: 30103, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇺🇸 美国 京沪BGP, server: bgpip1.qhnode.com, port: 30301, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇯🇵 日本原生 京沪BGP, server: bgpip1.qhnode.com, port: 5015, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇩🇪 德国原生 京沪BGP, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇵🇭 菲律宾原生 京沪BGP, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
-  - {name: 🇨🇦 加拿大多伦多, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
-  - {name: 🇸🇬 新加坡, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ}
-  - {name: 🇸🇬 金沙, server: 18.136.195.240, port: 10289, type: ss, cipher: aes-256-gcm, password: plAC8oF2SpMh}
-  - {name: 🇨🇳 台北NF, server: hinet1.gemgems.net, port: 18477, type: ss, cipher: aes-256-gcm, password: oS7ztgjRuQO1}
-  - {name: 🇨🇳 新北, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
-  - {name: 🇸🇬 新加坡1, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ }
-  - {name: 🇺🇸 西雅图, server: 3.1.49.29, port: 13252, type: ss, cipher: aes-256-gcm, password: cPQHo2tyFK29}
-  - {name: 🇺🇸 拉斯维加斯, server: us.114514gay.top, port: 8443, type: vmess, cipher: aes-128-gcm, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
-  - {name: 🇭🇰 香港HKBN家宽, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
-  - {name: 🇸🇬 新加坡新达城, server: ap1-sg.er3.xyz, port: 29986, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇭🇰 香港铜锣湾,  server: a1.er3.xyz, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}  
-  - {name: 🇸🇬 新加坡2, server: tx.wy.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇯🇵 东京银座, server: a1.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡圣淘沙, server: a2.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡滨海湾, server: a3.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡金沙湾, server: a4.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡金沙湾1, server: a5.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇯🇵 日本大阪, server: ap1-jp.er3.xyz, port: 29985, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇺🇸 美国曼哈顿, server: ap1-us.er3.xyz, port: 29988, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇬🇧 英国牛津, server: ap1-uk.er3.xyz, port: 29987, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇩🇪 德国柏林, server: ap1-ge.er3.xyz, port: 29984, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇨🇦 多伦多, server: ap1-ca.er3.xyz, port: 29983, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇦🇺 澳大利亚悉尼, server: ap1-au.er3.xyz, port: 29982, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-  - {name: 🇦🇺 澳大利亚1, server: global.ap.fastqvpn.com, port: 29982, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-  - {name: 🇸🇬 新加坡3, server: global.ap.fastqvpn.com, port: 29986, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-  - {name: 🇨🇦 加拿大1, server: global.ap.fastqvpn.com, port: 29983, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}  
-  - {name: 🇩🇪 德国1, server: global.ap.fastqvpn.com, port: 29984, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-  - {name: 🇯🇵 日本1, server: global.ap.fastqvpn.com, port: 29985, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-  - {name: 🇺🇸 美国1, server: global.ap.fastqvpn.com, port: 29988, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇨🇳 香港京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇯🇵 日本京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇸🇬 新加坡京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 30103, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇺🇸 美国京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 30301, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇯🇵 日本原生京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 5015, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇩🇪 德国原生京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 4005, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇵🇭 菲律宾原生京沪BGP|TG@ainsipiao, server: bgpip1.qhnode.com, port: 2079, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
+  - {name: 🇨🇦 加拿大多伦多|TG@ainsipiao, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
+  - {name: 🇸🇬 新加坡|TG@ainsipiao, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ}
+  - {name: 🇸🇬 金沙|TG@ainsipiao, server: 18.136.195.240, port: 10289, type: ss, cipher: aes-256-gcm, password: plAC8oF2SpMh}
+  - {name: 🇨🇳 台北NF|TG@ainsipiao, server: hinet1.gemgems.net, port: 18477, type: ss, cipher: aes-256-gcm, password: oS7ztgjRuQO1}
+  - {name: 🇨🇳 新北|TG@ainsipiao, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
+  - {name: 🇸🇬 新加坡1|TG@ainsipiao, server: bgp4.gemgems.net, port: 15833, type: ss, cipher: aes-256-gcm, password: eGpIWDdcCemZ }
+  - {name: 🇺🇸 西雅图|TG@ainsipiao, server: 3.1.49.29, port: 13252, type: ss, cipher: aes-256-gcm, password: cPQHo2tyFK29}
+  - {name: 🇺🇸 拉斯维加斯|TG@ainsipiao, server: us.114514gay.top, port: 8443, type: vmess, cipher: aes-128-gcm, uuid: 9b2309ce-9ea7-4f62-df31-40a6bd4b7fef, alterId: 64, cipher: auto, tls: true, network: ws}
+  - {name: 🇭🇰 香港HKBN家宽|TG@ainsipiao, server: hkbn2.tcpbbr.net, port: 443, type: vmess, cipher: aes-128-gcm, uuid: 73a4ff1c-85c8-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: true}
+  - {name: 🇸🇬 新加坡新达城|TG@ainsipiao, server: ap1-sg.er3.xyz, port: 29986, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇭🇰 香港铜锣湾|TG@ainsipiao,  server: a1.er3.xyz, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}  
+  - {name: 🇸🇬 新加坡2|TG@ainsipiao, server: tx.wy.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇯🇵 东京银座|TG@ainsipiao, server: a1.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡圣淘沙|TG@ainsipiao, server: a2.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡滨海湾|TG@ainsipiao, server: a3.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡金沙湾|TG@ainsipiao, server: a4.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡金沙湾1|TG@ainsipiao, server: a5.ap.fastqvpn.com, port: 29980, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇯🇵 日本大阪|TG@ainsipiao, server: ap1-jp.er3.xyz, port: 29985, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇺🇸 美国曼哈顿|TG@ainsipiao, server: ap1-us.er3.xyz, port: 29988, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇬🇧 英国牛津|TG@ainsipiao, server: ap1-uk.er3.xyz, port: 29987, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇩🇪 德国柏林|TG@ainsipiao, server: ap1-ge.er3.xyz, port: 29984, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇨🇦 多伦多|TG@ainsipiao, server: ap1-ca.er3.xyz, port: 29983, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇦🇺 澳大利亚悉尼|TG@ainsipiao, server: ap1-au.er3.xyz, port: 29982, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
+  - {name: 🇦🇺 澳大利亚1|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29982, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇸🇬 新加坡3|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29986, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇨🇦 加拿大1|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29983, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}  
+  - {name: 🇩🇪 德国1|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29984, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇯🇵 日本1|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29985, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇺🇸 美国1|TG@ainsipiao, server: global.ap.fastqvpn.com, port: 29988, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🇨🇳 香港 京沪BGP
-      - 🇯🇵 日本 京沪BGP
-      - 🇸🇬 新加坡 京沪BGP
-      - 🇺🇸 美国 京沪BGP
-      - 🇯🇵 日本原生 京沪BGP
-      - 🇩🇪 德国原生 京沪BGP
-      - 🇵🇭 菲律宾原生 京沪BGP
-      - 🇨🇦 加拿大多伦多
-      - 🇸🇬 新加坡
-      - 🇸🇬 金沙
-      - 🇨🇳 台北NF
-      - 🇨🇳 新北
-      - 🇸🇬 新加坡1
-      - 🇺🇸 西雅图
-      - 🇺🇸 拉斯维加斯
-      - 🇭🇰 香港HKBN家宽
-      - 🇸🇬 新加坡新达城
-      - 🇭🇰 香港铜锣湾
-      - 🇸🇬 新加坡2
-      - 🇯🇵 东京银座
-      - 🇸🇬 新加坡圣淘沙
-      - 🇸🇬 新加坡滨海湾
-      - 🇸🇬 新加坡金沙湾
-      - 🇸🇬 新加坡金沙湾1
-      - 🇯🇵 日本大阪
-      - 🇺🇸 美国曼哈顿
-      - 🇬🇧 英国牛津
-      - 🇩🇪 德国柏林
-      - 🇨🇦 多伦多
-      - 🇦🇺 澳大利亚悉尼
-      - 🇦🇺 澳大利亚1
-      - 🇸🇬 新加坡3
-      - 🇨🇦 加拿大1
-      - 🇩🇪 德国1
-      - 🇯🇵 日本1
-      - 🇺🇸 美国1 
+      - 🇨🇳 香港京沪BGP|TG@ainsipiao
+      - 🇯🇵 日本京沪BGP|TG@ainsipiao
+      - 🇸🇬 新加坡京沪BGP|TG@ainsipiao
+      - 🇺🇸 美国京沪BGP|TG@ainsipiao
+      - 🇯🇵 日本原生京沪BGP|TG@ainsipiao
+      - 🇩🇪 德国原生京沪BGP|TG@ainsipiao
+      - 🇵🇭 菲律宾原生京沪BGP|TG@ainsipiao
+      - 🇨🇦 加拿大多伦多|TG@ainsipiao
+      - 🇸🇬 新加坡|TG@ainsipiao
+      - 🇸🇬 金沙|TG@ainsipiao
+      - 🇨🇳 台北NF|TG@ainsipiao
+      - 🇨🇳 新北|TG@ainsipiao
+      - 🇸🇬 新加坡1|TG@ainsipiao
+      - 🇺🇸 西雅图|TG@ainsipiao
+      - 🇺🇸 拉斯维加斯|TG@ainsipiao
+      - 🇭🇰 香港HKBN家宽|TG@ainsipiao
+      - 🇸🇬 新加坡新达城|TG@ainsipiao
+      - 🇭🇰 香港铜锣湾|TG@ainsipiao
+      - 🇸🇬 新加坡2|TG@ainsipiao
+      - 🇯🇵 东京银座|TG@ainsipiao
+      - 🇸🇬 新加坡圣淘沙|TG@ainsipiao
+      - 🇸🇬 新加坡滨海湾|TG@ainsipiao
+      - 🇸🇬 新加坡金沙湾|TG@ainsipiao
+      - 🇸🇬 新加坡金沙湾1|TG@ainsipiao
+      - 🇯🇵 日本大阪|TG@ainsipiao
+      - 🇺🇸 美国曼哈顿|TG@ainsipiao
+      - 🇬🇧 英国牛津|TG@ainsipiao
+      - 🇩🇪 德国柏林|TG@ainsipiao
+      - 🇨🇦 多伦多|TG@ainsipiao
+      - 🇦🇺 澳大利亚悉尼|TG@ainsipiao
+      - 🇦🇺 澳大利亚1|TG@ainsipiao
+      - 🇸🇬 新加坡3|TG@ainsipiao
+      - 🇨🇦 加拿大1|TG@ainsipiao
+      - 🇩🇪 德国1|TG@ainsipiao
+      - 🇯🇵 日本1|TG@ainsipiao
+      - 🇺🇸 美国1 |TG@ainsipiao
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇳 香港 京沪BGP
-      - 🇯🇵 日本 京沪BGP
-      - 🇸🇬 新加坡 京沪BGP
-      - 🇺🇸 美国 京沪BGP
-      - 🇯🇵 日本原生 京沪BGP
-      - 🇩🇪 德国原生 京沪BGP
-      - 🇵🇭 菲律宾原生 京沪BGP
-      - 🇨🇦 加拿大多伦多
-      - 🇸🇬 新加坡
-      - 🇸🇬 金沙
-      - 🇨🇳 台北NF
-      - 🇨🇳 新北
-      - 🇸🇬 新加坡1
-      - 🇺🇸 西雅图
-      - 🇺🇸 拉斯维加斯
-      - 🇭🇰 香港HKBN家宽
-      - 🇸🇬 新加坡新达城
-      - 🇭🇰 香港铜锣湾
-      - 🇸🇬 新加坡2
-      - 🇯🇵 东京银座
-      - 🇸🇬 新加坡圣淘沙
-      - 🇸🇬 新加坡滨海湾
-      - 🇸🇬 新加坡金沙湾
-      - 🇸🇬 新加坡金沙湾1
-      - 🇯🇵 日本大阪
-      - 🇺🇸 美国曼哈顿
-      - 🇬🇧 英国牛津
-      - 🇩🇪 德国柏林
-      - 🇨🇦 多伦多
-      - 🇦🇺 澳大利亚悉尼
-      - 🇦🇺 澳大利亚1
-      - 🇸🇬 新加坡3
-      - 🇨🇦 加拿大1
-      - 🇩🇪 德国1
-      - 🇯🇵 日本1
-      - 🇺🇸 美国1
+      - 🇨🇳 香港京沪BGP|TG@ainsipiao
+      - 🇯🇵 日本京沪BGP|TG@ainsipiao
+      - 🇸🇬 新加坡京沪BGP|TG@ainsipiao
+      - 🇺🇸 美国京沪BGP|TG@ainsipiao
+      - 🇯🇵 日本原生京沪BGP|TG@ainsipiao
+      - 🇩🇪 德国原生京沪BGP|TG@ainsipiao
+      - 🇵🇭 菲律宾原生京沪BGP|TG@ainsipiao
+      - 🇨🇦 加拿大多伦多|TG@ainsipiao
+      - 🇸🇬 新加坡|TG@ainsipiao
+      - 🇸🇬 金沙|TG@ainsipiao
+      - 🇨🇳 台北NF|TG@ainsipiao
+      - 🇨🇳 新北|TG@ainsipiao
+      - 🇸🇬 新加坡1|TG@ainsipiao
+      - 🇺🇸 西雅图|TG@ainsipiao
+      - 🇺🇸 拉斯维加斯|TG@ainsipiao
+      - 🇭🇰 香港HKBN家宽|TG@ainsipiao
+      - 🇸🇬 新加坡新达城|TG@ainsipiao
+      - 🇭🇰 香港铜锣湾|TG@ainsipiao
+      - 🇸🇬 新加坡2|TG@ainsipiao
+      - 🇯🇵 东京银座|TG@ainsipiao
+      - 🇸🇬 新加坡圣淘沙|TG@ainsipiao
+      - 🇸🇬 新加坡滨海湾|TG@ainsipiao
+      - 🇸🇬 新加坡金沙湾|TG@ainsipiao
+      - 🇸🇬 新加坡金沙湾1|TG@ainsipiao
+      - 🇯🇵 日本大阪|TG@ainsipiao
+      - 🇺🇸 美国曼哈顿|TG@ainsipiao
+      - 🇬🇧 英国牛津|TG@ainsipiao
+      - 🇩🇪 德国柏林|TG@ainsipiao
+      - 🇨🇦 多伦多|TG@ainsipiao
+      - 🇦🇺 澳大利亚悉尼|TG@ainsipiao
+      - 🇦🇺 澳大利亚1|TG@ainsipiao
+      - 🇸🇬 新加坡3|TG@ainsipiao
+      - 🇨🇦 加拿大1|TG@ainsipiao
+      - 🇩🇪 德国1|TG@ainsipiao
+      - 🇯🇵 日本1|TG@ainsipiao
+      - 🇺🇸 美国1 |TG@ainsipiao
   - name: 🌍 国外媒体
     type: select
     proxies:
