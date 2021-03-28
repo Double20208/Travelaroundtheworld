@@ -170,8 +170,7 @@ proxy-groups:
       - 🇯🇵 日本1
       - 🇬🇧 英国1
       - 🇺🇸 美国1
- 
-- name: 🔮 负载均衡
+ - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
@@ -220,13 +219,11 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
-  
   - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
       - DIRECT
-  
   - name: 🐟 漏网之鱼
     type: select
     proxies:
