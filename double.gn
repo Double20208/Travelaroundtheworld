@@ -40,7 +40,6 @@ proxies:
   - {name: 🇨🇦 加拿大1, server: global.ap.fastqvpn.com, port: 29983, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}  
   - {name: 🇩🇪 德国1, server: global.ap.fastqvpn.com, port: 29984, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
   - {name: 🇯🇵 日本1, server: global.ap.fastqvpn.com, port: 29985, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
-  - {name: 🇬🇧 英国1, server: global.ap.fastqvpn.com, port: 29987, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d799, tls: true}
   - {name: 🇺🇸 美国1, server: global.ap.fastqvpn.com, port: 29988, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
 proxy-groups:
   - name: 🚀 节点选择
@@ -81,7 +80,6 @@ proxy-groups:
       - 🇨🇦 加拿大1
       - 🇩🇪 德国1
       - 🇯🇵 日本1
-      - 🇬🇧 英国1
       - 🇺🇸 美国1 
   - name: ♻️ 自动选择
     type: url-test
@@ -124,7 +122,6 @@ proxy-groups:
       - 🇨🇦 加拿大1
       - 🇩🇪 德国1
       - 🇯🇵 日本1
-      - 🇬🇧 英国1
       - 🇺🇸 美国1
   - name: 🌍 国外媒体
     type: select
