@@ -35,7 +35,15 @@ proxies:
   - {name: 🇩🇪 德国柏林, server: ap1-ge.er3.xyz, port: 29984, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
   - {name: 🇨🇦 多伦多, server: ap1-ca.er3.xyz, port: 29983, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
   - {name: 🇦🇺 澳大利亚悉尼, server: ap1-au.er3.xyz, port: 29982, type: http, username: 428297471626575872, password: 57692b33-20a2-42f0-b8c1-b31a5167b8df, tls: true, skip-cert-verify: true}
-proxy-groups:
+  - {name: 🇦🇺 澳大利亚1, server: global.ap.fastqvpn.com, port: 29982, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇸🇬 新加坡3, server: global.ap.fastqvpn.com, port: 29986, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇨🇦 加拿大1, server: global.ap.fastqvpn.com, port: 29983, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}  
+  - {name: 🇩🇪 德国1, server: global.ap.fastqvpn.com, port: 29984, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇯🇵 日本1, server: global.ap.fastqvpn.com, port: 29985, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+  - {name: 🇬🇧 英国1, server: global.ap.fastqvpn.com, port: 29987, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d799, tls: true}
+  - {name: 🇺🇸 美国1, server: global.ap.fastqvpn.com, port: 29988, type: http, username: "428537534994186240", password: 150cb951-2d98-4a9e-ab76-791a8c099d79, tls: true}
+
+  proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -69,6 +77,13 @@ proxy-groups:
       - 🇩🇪 德国柏林
       - 🇨🇦 多伦多
       - 🇦🇺 澳大利亚悉尼
+      - 🇦🇺 澳大利亚1
+      - 🇸🇬 新加坡3
+      - 🇨🇦 加拿大1
+      - 🇩🇪 德国1
+      - 🇯🇵 日本1
+      - 🇬🇧 英国1
+      - 🇺🇸 美国1
           
   - name: ♻️ 自动选择
     type: url-test
@@ -106,6 +121,13 @@ proxy-groups:
       - 🇩🇪 德国柏林
       - 🇨🇦 多伦多
       - 🇦🇺 澳大利亚悉尼
+      - 🇦🇺 澳大利亚1
+      - 🇸🇬 新加坡3
+      - 🇨🇦 加拿大1
+      - 🇩🇪 德国1
+      - 🇯🇵 日本1
+      - 🇬🇧 英国1
+      - 🇺🇸 美国1
       
   - name: 🔯 故障转移
     type: fallback
@@ -142,8 +164,15 @@ proxy-groups:
       - 🇩🇪 德国柏林
       - 🇨🇦 多伦多
       - 🇦🇺 澳大利亚悉尼
-  
-  - name: 🔮 负载均衡
+      - 🇦🇺 澳大利亚1
+      - 🇸🇬 新加坡3
+      - 🇨🇦 加拿大1
+      - 🇩🇪 德国1
+      - 🇯🇵 日本1
+      - 🇬🇧 英国1
+      - 🇺🇸 美国1
+ 
+- name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
@@ -178,6 +207,13 @@ proxy-groups:
       - 🇩🇪 德国柏林
       - 🇨🇦 多伦多
       - 🇦🇺 澳大利亚悉尼
+      - 🇦🇺 澳大利亚1
+      - 🇸🇬 新加坡3
+      - 🇨🇦 加拿大1
+      - 🇩🇪 德国1
+      - 🇯🇵 日本1
+      - 🇬🇧 英国1
+      - 🇺🇸 美国1
   
   - name: 🎯 全球直连
     type: select
@@ -225,7 +261,13 @@ proxy-groups:
       - 🇩🇪 德国柏林
       - 🇨🇦 多伦多
       - 🇦🇺 澳大利亚悉尼
-
+      - 🇦🇺 澳大利亚1
+      - 🇸🇬 新加坡3
+      - 🇨🇦 加拿大1
+      - 🇩🇪 德国1
+      - 🇯🇵 日本1
+      - 🇬🇧 英国1
+      - 🇺🇸 美国1
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
