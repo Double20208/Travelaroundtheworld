@@ -10,6 +10,10 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
+rewrite: 
+  hostname = *.googlevideo.com
+ctier=[A-Z] url 307 ctier=A
+^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject-200
 proxies:
   - {name: 🇨🇳 香港 京沪BGP, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇯🇵 日本 京沪BGP, server: bgpip1.qhnode.com, port: 30302, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
@@ -3456,3 +3460,4 @@ rules:
  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
  - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼
+
