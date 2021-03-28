@@ -80,7 +80,7 @@ proxy-groups:
       - 🇨🇦 加拿大1|TG@ainsipiao
       - 🇩🇪 德国1|TG@ainsipiao
       - 🇯🇵 日本1|TG@ainsipiao
-      - 🇺🇸 美国1 |TG@ainsipiao
+      - 🇺🇸 美国1|TG@ainsipiao
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -122,7 +122,7 @@ proxy-groups:
       - 🇨🇦 加拿大1|TG@ainsipiao
       - 🇩🇪 德国1|TG@ainsipiao
       - 🇯🇵 日本1|TG@ainsipiao
-      - 🇺🇸 美国1 |TG@ainsipiao
+      - 🇺🇸 美国1|TG@ainsipiao
   - name: 🌍 国外媒体
     type: select
     proxies:
