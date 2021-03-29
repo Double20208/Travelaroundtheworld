@@ -239,6 +239,7 @@ rules:
   - DOMAIN-KEYWORD,partnerad,🛑 全球拦截
   - DOMAIN-KEYWORD,pingfore,🛑 全球拦截
   - DOMAIN-KEYWORD,socdm,🛑 全球拦截
+  - DOMAIN-KEYWORD, lutcreator,🛑 全球拦截
   - DOMAIN-KEYWORD,supersonicads,🛑 全球拦截
   - DOMAIN-KEYWORD,tracking,🛑 全球拦截
   - DOMAIN-KEYWORD,usage,🛑 全球拦截
