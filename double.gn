@@ -5,7 +5,6 @@
 #---------------------------------------------------------#
 
 proxies:
-  - {name: 🇹🇭 欢迎加入我们的tg群https://t.me/ainsipiao, server: 27.131.138.176, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
   - {name: 🇨🇳 香港 京沪BGP, server: bgpip1.qhnode.com, port: 30201, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇸🇬 新加坡 京沪BGP, server: bgpip1.qhnode.com, port: 30103, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
   - {name: 🇺🇸 美国 京沪BGP, server: bgpip1.qhnode.com, port: 30301, type: ss, cipher: chacha20-ietf-poly1305, password: 24f016f2-0b29-4a66-bebe-5f78e846957f}
@@ -45,7 +44,6 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🇹🇭 欢迎加入我们的tg群https://t.me/ainsipiao
       - 🇨🇳 香港 京沪BGP
       - 🇸🇬 新加坡 京沪BGP
       - 🇺🇸 美国 京沪BGP
@@ -87,7 +85,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 🇹🇭 欢迎加入我们的tg群https://t.me/ainsipiao
       - 🇨🇳 香港 京沪BGP
       - 🇸🇬 新加坡 京沪BGP
       - 🇺🇸 美国 京沪BGP
