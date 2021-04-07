@@ -45,7 +45,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🇨🇳 欢迎加入我们的tg群https://t.me/ainsipiao
+      - 🇹🇭 欢迎加入我们的tg群https://t.me/ainsipiao
       - 🇨🇳 香港 京沪BGP
       - 🇸🇬 新加坡 京沪BGP
       - 🇺🇸 美国 京沪BGP
@@ -84,10 +84,10 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 600
     tolerance: 50
     proxies:
-      - 🇨🇳 欢迎加入我们的tg群https://t.me/ainsipiao
+      - 🇹🇭 欢迎加入我们的tg群https://t.me/ainsipiao
       - 🇨🇳 香港 京沪BGP
       - 🇸🇬 新加坡 京沪BGP
       - 🇺🇸 美国 京沪BGP
