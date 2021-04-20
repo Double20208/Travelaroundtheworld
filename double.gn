@@ -10,14 +10,14 @@ proxies:
   - {name: 🇨🇳 台北NF, server: hinet1.gemgems.net, port: 18477, type: ss, cipher: aes-256-gcm, password: oS7ztgjRuQO1}
   - {name: 🇨🇳 新北, server: hinet3.gemgems.net, port: 10760, type: ss, cipher: aes-256-gcm, password: kmaWmvE8fWdP}
   - {name: 🇺🇸 西雅图, server: 3.1.49.29, port: 13252, type: ss, cipher: aes-256-gcm, password: cPQHo2tyFK29}
-  - {name: 🇨🇳 香港, server: huanan2.gochiusa.cc, port: 35312, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇨🇳 香港1, server: huanan2.gochiusa.cc, port: 35318, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇨🇳 香港2, server: huanan2.gochiusa.cc, port: 35294, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇻🇳 越南, server: huanan2.gochiusa.cc, port: 35231, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇺🇸 美国, server: huanan1.gochiusa.cc, port: 35240, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇨🇳 台湾, server: huanan2.gochiusa.cc, port: 35324, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇮🇱 以色列, server: huanan2.gochiusa.cc, port: 35225, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
-  - {name: 🇺🇦 乌克兰, server: huanan2.gochiusa.cc, port: 35258, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: auth_aes128_sha1, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇨🇳 香港, server: huanan2.gochiusa.cc, port: 35312, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇨🇳 香港1, server: huanan2.gochiusa.cc, port: 35318, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇨🇳 香港2, server: huanan2.gochiusa.cc, port: 35294, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇻🇳 越南, server: huanan2.gochiusa.cc, port: 35231, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇺🇸 美国, server: huanan1.gochiusa.cc, port: 35240, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇨🇳 台湾, server: huanan2.gochiusa.cc, port: 35324, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇮🇱 以色列, server: huanan2.gochiusa.cc, port: 35225, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
+  - {name: 🇺🇦 乌克兰, server: huanan2.gochiusa.cc, port: 35258, type: ssr, cipher: rc4-md5, password: xrNqrYXFdCpJe5sL, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 15887:Y6DxEA, obfs-param: 69ab815887.download.windowsupdate.com}
   
 proxy-groups:
   - name: 🚀 节点选择
