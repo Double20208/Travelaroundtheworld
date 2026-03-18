@@ -6,7 +6,7 @@ export default async function (ctx) {
   const API_BASE_URL = "https://v1.hitokoto.cn/";
   const REFRESH_MINUTES = 30;
   const DEFAULT_QUOTE = "庐山烟雨浙江潮，未至千般恨不消。到得还来别无事，庐山烟雨浙江潮。";
-  const DEFAULT_AUTHOR = "未知";
+  const DEFAULT_AUTHOR = "苏轼";
 
   // 2. 优化 URL 构造逻辑
   const type = ctx.env.TYPE?.trim() || "";
