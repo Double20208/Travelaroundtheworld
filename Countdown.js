@@ -7,38 +7,35 @@
  */
 
 export default async function (ctx) {
+  // ================= 核心魔法 1：获取真实的北京时间数字 =================
   const now = new Date();
+  // 强行用毫秒数加上 8 小时，获取北京时间的绝对值
+  const bjTime = new Date(now.getTime() + (8 * 3600000));
+  const bjY = bjTime.getUTCFullYear();
+  const bjM = bjTime.getUTCMonth(); // 月份是 0-11
+  const bjD = bjTime.getUTCDate();
   
-  // 1. 安全获取北京时间的年、月、日
-  const bjParts = new Intl.DateTimeFormat('en-US', { 
-    timeZone: 'Asia/Shanghai', year: 'numeric', month: 'numeric', day: 'numeric' 
-  }).formatToParts(now);
-  
-  let bjY, bjM, bjD;
-  bjParts.forEach(p => {
-    if (p.type === 'year') bjY = parseInt(p.value);
-    if (p.type === 'month') bjM = parseInt(p.value);
-    if (p.type === 'day') bjD = parseInt(p.value);
-  });
-  
-  // 核心修复 1：将“今天”的计算锚点设为北京时间的【正午12点】（对应 UTC 的 04:00）
-  // 完美吸收所有的时差波动，无论代理怎么飘，绝不跨日！
-  const todayAnchor = new Date(Date.UTC(bjY, bjM - 1, bjD, 4, 0, 0));
+  // 顶部时钟
+  const timeStr = `${String(bjTime.getUTCHours()).padStart(2, "0")}:${String(bjTime.getUTCMinutes()).padStart(2, "0")}`;
 
-  const timeFormatter = new Intl.DateTimeFormat('en-GB', { 
-    timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false
-  });
-  const timeStr = timeFormatter.format(now);
+  // ================= 核心魔法 2：制造本地时区的“假北京时间” =================
+  // 我们直接用北京的数字，生成一个手机【本地时区】的今天，并钉死在正午 12 点！
+  // 这样不论手机底层怎么转，它读取出来的就是我们给的日期。
+  const localToday = new Date(bjY, bjM, bjD, 12, 0, 0);
+
+  // 通用天数计算：只比较两个正午 12 点的差值，完美避开夏令时吞掉的 1 小时
+  const getDiff = (tY, tM, tD) => {
+    const target = new Date(tY, tM - 1, tD, 12, 0, 0);
+    return Math.round((target - localToday) / 86400000);
+  };
 
   // 1. 主目标计算
   const mainTitle = ctx.env.MAIN_TITLE || "已出生天数";
   const mainRaw = (ctx.env.MAIN_DATE || "1997-06-20").replace('+', '').trim();
   const [bY, bM, bD] = mainRaw.split('-').map(Number);
   
-  // 主目标的锚点同样设为正午12点
-  const mainAnchor = new Date(Date.UTC(bY, bM - 1, bD, 4, 0, 0));
-  let passedDays = Math.round((todayAnchor - mainAnchor) / 86400000);
-  if (passedDays < 0) passedDays = Math.abs(passedDays);
+  // 正计时，直接取绝对值
+  const passedDays = Math.abs(getDiff(bY, bM, bD));
 
   // 2. 列表解析
   const getList = (side) => {
@@ -51,22 +48,23 @@ export default async function (ctx) {
         const cleanStr = d.replace('+', '').replace('-L', '').trim();
         
         if (d.endsWith("+")) {
+          // 过去的日子
           const [tY, tM, tD] = cleanStr.split("-").map(Number);
-          const targetAnchor = new Date(Date.UTC(tY, tM - 1, tD, 4, 0, 0));
-          days = Math.round((todayAnchor - targetAnchor) / 86400000);
+          days = Math.abs(getDiff(tY, tM, tD));
         } else if (d.endsWith("-L")) {
-          days = getLunarRemaining(cleanStr, todayAnchor);
+          // 农历计算
+          days = getLunarRemaining(cleanStr, localToday);
         } else if (cleanStr.length === 5) {
+          // 每年重复的阳历
           const [tM, tD] = cleanStr.split("-").map(Number);
-          let targetAnchor = new Date(Date.UTC(bjY, tM - 1, tD, 4, 0, 0));
-          if (targetAnchor < todayAnchor) {
-            targetAnchor = new Date(Date.UTC(bjY + 1, tM - 1, tD, 4, 0, 0));
+          days = getDiff(bjY, tM, tD);
+          if (days < 0) {
+              days = getDiff(bjY + 1, tM, tD); // 过了算明年
           }
-          days = Math.round((targetAnchor - todayAnchor) / 86400000);
         } else {
+          // 具体的未来某天
           const [tY, tM, tD] = cleanStr.split("-").map(Number);
-          const targetAnchor = new Date(Date.UTC(tY, tM - 1, tD, 4, 0, 0));
-          days = Math.round((targetAnchor - todayAnchor) / 86400000);
+          days = getDiff(tY, tM, tD);
         }
         list.push({ title: t, days: Math.max(0, days) });
       }
@@ -143,25 +141,23 @@ function buildCapsule(item) {
   };
 }
 
-// ================= 最稳健的农历推演引擎 =================
-function getLunarRemaining(mdStr, todayAnchor) {
+// ================= 脱离时区绑定的农历引擎 =================
+function getLunarRemaining(mdStr, localToday) {
   const [lMonth, lDay] = mdStr.split("-").map(Number);
   
-  // 恢复原版被验证跑得通的 Locale 配置，只加上关键的时区锁
+  // 完全移除 timeZone 配置，让 iOS 乖乖使用我们喂给它的本地时间
   const formatter = new Intl.DateTimeFormat('zh-u-ca-chinese', { 
-    timeZone: 'Asia/Shanghai', 
     month: 'numeric', 
     day: 'numeric' 
   });
 
-  // 以今天中午 12 点为起跑线，每次平移 24 小时 (86400000毫秒) 穷举
   for (let i = 0; i <= 385; i++) {
-    const testDate = new Date(todayAnchor.getTime() + i * 86400000);
+    // 基于本地今天正午 12 点，每天增加 86400000 毫秒
+    const testDate = new Date(localToday.getTime() + i * 86400000);
     const parts = formatter.formatToParts(testDate);
     
     let m = 0, d = 0;
     parts.forEach(p => {
-      // 这里的逻辑与你最早提供的一模一样，确保不会在特定 iOS 版本上报错
       if (p.type === 'month') m = parseInt(p.value);
       if (p.type === 'day') d = parseInt(p.value);
     });
