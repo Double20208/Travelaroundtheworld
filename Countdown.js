@@ -7,26 +7,20 @@
  */
 
 export default async function (ctx) {
-  // ================= 核心魔法 1：获取真实的北京时间数字 =================
+  // 1. 获取纯正的本地时间，将时分秒全部抹零，只取今天的日期
   const now = new Date();
-  // 强行用毫秒数加上 8 小时，获取北京时间的绝对值
-  const bjTime = new Date(now.getTime() + (8 * 3600000));
-  const bjY = bjTime.getUTCFullYear();
-  const bjM = bjTime.getUTCMonth(); // 月份是 0-11
-  const bjD = bjTime.getUTCDate();
-  
-  // 顶部时钟
-  const timeStr = `${String(bjTime.getUTCHours()).padStart(2, "0")}:${String(bjTime.getUTCMinutes()).padStart(2, "0")}`;
+  const currentYear = now.getFullYear();
+  const todayLocal = new Date(currentYear, now.getMonth(), now.getDate());
 
-  // ================= 核心魔法 2：制造本地时区的“假北京时间” =================
-  // 我们直接用北京的数字，生成一个手机【本地时区】的今天，并钉死在正午 12 点！
-  // 这样不论手机底层怎么转，它读取出来的就是我们给的日期。
-  const localToday = new Date(bjY, bjM, bjD, 12, 0, 0);
+  const timeStr = `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
 
-  // 通用天数计算：只比较两个正午 12 点的差值，完美避开夏令时吞掉的 1 小时
-  const getDiff = (tY, tM, tD) => {
-    const target = new Date(tY, tM - 1, tD, 12, 0, 0);
-    return Math.round((target - localToday) / 86400000);
+  // ================= 核心修复：纯数字日期天数计算器 =================
+  // 绝对不使用 new Date("YYYY-MM-DD")，防止它擅自减去 8 小时变成前一天
+  const getDiffDays = (y, m, d) => {
+    // 使用本地时区构建目标日期的零点
+    const target = new Date(y, m - 1, d);
+    // 使用 Math.round 规避夏令时导致的 23.99 小时被取整为 0 天的 Bug
+    return Math.round((target - todayLocal) / 86400000);
   };
 
   // 1. 主目标计算
@@ -34,8 +28,8 @@ export default async function (ctx) {
   const mainRaw = (ctx.env.MAIN_DATE || "1997-06-20").replace('+', '').trim();
   const [bY, bM, bD] = mainRaw.split('-').map(Number);
   
-  // 正计时，直接取绝对值
-  const passedDays = Math.abs(getDiff(bY, bM, bD));
+  // 主计算：求绝对值天数
+  let passedDays = Math.abs(getDiffDays(bY, bM, bD));
 
   // 2. 列表解析
   const getList = (side) => {
@@ -48,23 +42,23 @@ export default async function (ctx) {
         const cleanStr = d.replace('+', '').replace('-L', '').trim();
         
         if (d.endsWith("+")) {
-          // 过去的日子
+          // 正计时：过去 -> 今天
           const [tY, tM, tD] = cleanStr.split("-").map(Number);
-          days = Math.abs(getDiff(tY, tM, tD));
+          days = Math.abs(getDiffDays(tY, tM, tD));
         } else if (d.endsWith("-L")) {
           // 农历计算
-          days = getLunarRemaining(cleanStr, localToday);
+          days = getLunarRemaining(cleanStr, todayLocal);
         } else if (cleanStr.length === 5) {
-          // 每年重复的阳历
+          // 每年重复的阳历 (MM-DD)
           const [tM, tD] = cleanStr.split("-").map(Number);
-          days = getDiff(bjY, tM, tD);
+          days = getDiffDays(currentYear, tM, tD);
           if (days < 0) {
-              days = getDiff(bjY + 1, tM, tD); // 过了算明年
+              days = getDiffDays(currentYear + 1, tM, tD); // 今年已过，算明年的
           }
         } else {
-          // 具体的未来某天
+          // 特定未来日期 (YYYY-MM-DD)
           const [tY, tM, tD] = cleanStr.split("-").map(Number);
-          days = getDiff(tY, tM, tD);
+          days = getDiffDays(tY, tM, tD);
         }
         list.push({ title: t, days: Math.max(0, days) });
       }
@@ -141,25 +135,27 @@ function buildCapsule(item) {
   };
 }
 
-// ================= 脱离时区绑定的农历引擎 =================
-function getLunarRemaining(mdStr, localToday) {
+// ================= 最纯净的农历引擎 =================
+function getLunarRemaining(mdStr, todayLocal) {
   const [lMonth, lDay] = mdStr.split("-").map(Number);
   
-  // 完全移除 timeZone 配置，让 iOS 乖乖使用我们喂给它的本地时间
-  const formatter = new Intl.DateTimeFormat('zh-u-ca-chinese', { 
+  // 仅指定中国历法，让系统自动用你的手机时区去匹配
+  const formatter = new Intl.DateTimeFormat('zh-CN', { 
+    calendar: 'chinese',
     month: 'numeric', 
     day: 'numeric' 
   });
 
   for (let i = 0; i <= 385; i++) {
-    // 基于本地今天正午 12 点，每天增加 86400000 毫秒
-    const testDate = new Date(localToday.getTime() + i * 86400000);
+    // 从今天的本地零点开始往后推演，彻底杜绝 UTC 偏移
+    const testDate = new Date(todayLocal.getFullYear(), todayLocal.getMonth(), todayLocal.getDate() + i);
     const parts = formatter.formatToParts(testDate);
     
     let m = 0, d = 0;
     parts.forEach(p => {
-      if (p.type === 'month') m = parseInt(p.value);
-      if (p.type === 'day') d = parseInt(p.value);
+      // 兼容所有 iOS 版本，强行剔除可能出现的汉字（如"正月"），只保留数字
+      if (p.type === 'month') m = parseInt(p.value.replace(/[^\d]/g, '')) || m;
+      if (p.type === 'day') d = parseInt(p.value.replace(/[^\d]/g, '')) || d;
     });
 
     if (m === lMonth && d === lDay) return i;
