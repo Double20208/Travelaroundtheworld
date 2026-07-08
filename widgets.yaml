@@ -94,7 +94,7 @@ scriptings:
     script_url: https://raw.githubusercontent.com/egerndaddy/quick-start/main/modules/daily-progress.js
 - generic:
     name: 万年历
-    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/HL.js
+    script_url: https://raw.githubusercontent.com/Double20208/Travelaroundtheworld/refs/heads/main/Calendar.js
 - generic:
     name: SpeedTest
     script_url: https://raw.githubusercontent.com/xemeiss/Script/main/Egern/Widget/SpeedTest.js
