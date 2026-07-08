@@ -101,7 +101,8 @@ scriptings:
 - generic:
     name: 网络面板
    # script_url: https://raw.githubusercontent.com/jnlaoshu/MySelf/master/Egern/Widget/NetworkInfo.js
-    script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Network-Pro.js
+   # script_url: https://raw.githubusercontent.com/xcgtb/Egern-Widgets/main/Network-Pro.js
+    script_url: https://raw.githubusercontent.com/Double20208/Travelaroundtheworld/refs/heads/main/ip.js
 #- generic:
 #    name: Ip纯净度
 #    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/IP_Clean.JS
