@@ -1,6 +1,5 @@
 name: "小组件"
 description: "终极桌面仪表盘"
-
 env_schema:
   MAIN_TITLE:
     name: 【主盘】标题
@@ -10,7 +9,7 @@ env_schema:
     name: 【主盘】日期
     description: 格式：2023-05-20+ (带+号表示正计时算天数)
     default_value: "2023-05-20+"
-    
+
   L1_T:
     name: 【左1】标题
     description: 左侧第1个倒计时
@@ -19,7 +18,7 @@ env_schema:
     name: 【左1】日期
     description: 公历格式：01-01
     default_value: "01-01"
-    
+
   L2_T:
     name: 【左2】标题
     description: 左侧第2个倒计时
@@ -28,7 +27,7 @@ env_schema:
     name: 【左2】日期
     description: 格式：01-01-L (-L表示农历)
     default_value: "01-01-L"
-    
+
   L3_T:
     name: 【左3】标题
     description: 左侧第3个倒计时
@@ -37,7 +36,7 @@ env_schema:
     name: 【左3】日期
     description: 公历格式：04-05
     default_value: "04-05"
-    
+
   R1_T:
     name: 【右1】标题
     description: 右侧第1个倒计时
@@ -46,7 +45,7 @@ env_schema:
     name: 【右1】日期
     description: 格式：06-13-L (-L表示农历)
     default_value: "06-13-L"
-    
+
   R2_T:
     name: 【右2】标题
     description: 右侧第2个倒计时
@@ -55,7 +54,7 @@ env_schema:
     name: 【右2】日期
     description: 格式：08-21-L (-L表示农历)
     default_value: "08-21-L"
-    
+
   R3_T:
     name: 【右3】标题
     description: 右侧第3个倒计时
@@ -64,7 +63,6 @@ env_schema:
     name: 【右3】日期
     description: 公历格式：10-24
     default_value: "10-24"
-
   TYPE:
     name: 一言类型
     description: "a=动画 b=漫画 c=游戏 d=文学 e=原创 f=网络 g=其他 h=影视 i=诗词 j=网易云 k=哲学，留空则不限"
@@ -81,7 +79,7 @@ env_schema:
       - i
       - j
       - k
-      
+
   # ⬇️ 新增：和风天气相关的环境变量定义 ⬇️
   LOCATION:
     name: 【天气】定位城市
@@ -95,6 +93,24 @@ env_schema:
     name: 【天气】API KEY
     description: 和风天气开发者密钥
     default_value: "0663413329af4b9ea85aaf9cdac5be36"
+
+  # ⬇️ IP 纯净度小组件环境变量（由 IP_Purity_Widget.yaml 合并）⬇️
+  POLICY:
+    name: "检测策略"
+    description: "检测哪个策略组或节点的出口 IP（如 Proxy、香港）；留空按 Egern 分流规则"
+  MARK_IP:
+    name: "IP 打码"
+    description: "隐藏 IP 中间段，默认开启"
+    default_value: "true"
+    options:
+      - "true"
+      - "false"
+  REFRESH_MINUTES:
+    name: "刷新间隔（分钟）"
+    default_value: "10"
+  LABEL:
+    name: "名称"
+    description: "用来区分多个小组件（小号、中号显示在右下角；大号不显示，「检测」一行已写明策略）；不填时显示检测策略名"
 
 scriptings:
 - generic:
@@ -116,8 +132,10 @@ scriptings:
     name: SpeedTest
     script_url: https://raw.githubusercontent.com/xemeiss/Script/main/Egern/Widget/SpeedTest.js
 - generic:
-    name: 网络面板
-    script_url: https://raw.githubusercontent.com/Double20208/Travelaroundtheworld/refs/heads/main/ip.js
+    name: "ip-purity-widget"
+    script_url: "https://raw.githubusercontent.com/vfelix7/rule_module_script/refs/heads/master/egern/scripts/IP_Purity_Widget.js"
+    update_interval: 300
+    timeout: 15
 
 widgets:
 - name: 倒计时
@@ -133,5 +151,5 @@ widgets:
   script_name: 万年历
 - name: SpeedTest
   script_name: SpeedTest
-- name: 网络面板
-  script_name: 网络面板
+- name: "IP 纯净度"
+  script_name: "ip-purity-widget"
