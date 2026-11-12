@@ -130,7 +130,7 @@ scriptings:
     script_url: https://raw.githubusercontent.com/Double20208/Travelaroundtheworld/refs/heads/main/Calendar.js
 - generic:
     name: SpeedTest
-    script_url: https://raw.githubusercontent.com/xemeiss/Script/main/Egern/Widget/SpeedTest.js
+    script_url: https://raw.githubusercontent.com/BiaoerD/Enern-/main/NetSpeed_Widget_10s.js
 - generic:
     name: "ip-purity-widget"
     script_url: "https://raw.githubusercontent.com/vfelix7/rule_module_script/refs/heads/master/egern/scripts/IP_Purity_Widget.js"
